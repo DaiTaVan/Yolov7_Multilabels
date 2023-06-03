@@ -238,7 +238,7 @@ def plot_images(images, targets, paths=None, fname='images.jpg', names=None, max
             image_targets = targets[targets[:, 0] == i]
             boxes = xywh2xyxy(image_targets[:, 2:6]).T
             # classes = image_targets[:, 1].astype('int')
-            classes_lists = image_targets[:, 6:]
+            classes_lists = torch.tensor(image_targets[:, 6:])
             labels = image_targets.shape[1] == 6 + nc  # labels if no conf column
             conf = None if labels else image_targets[:, 6]  # check for confidence presence (label vs pred)
 
