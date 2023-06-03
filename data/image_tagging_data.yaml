@@ -1,0 +1,41 @@
+
+train: custom_data_multilabels/images/train 
+val: custom_data_multilabels/images/val
+test: custom_data_multilabels/images/test
+
+# number of classes
+nc: 228
+
+# class names
+names: ['shirt, blouse', 'top, t-shirt, sweatshirt', 'sweater', 'cardigan', 'jacket', 'vest', 'pants', 
+        'shorts', 'skirt', 'coat', 'dress', 'jumpsuit', 'cape', 'glasses', 'hat', 
+        'headband, head covering, hair accessory', 'tie', 'glove', 'watch', 'belt', 'leg warmer', 
+        'tights, stockings', 'sock', 'shoe', 'bag, wallet', 'scarf', 'umbrella', 'hood', 'collar', 
+        'lapel', 'epaulette', 'sleeve', 'pocket', 'neckline', 'buckle', 'zipper', 'applique', 'bead', 
+        'bow', 'flower', 'fringe', 'ribbon', 'rivet', 'ruffle', 'sequin', 'tassel',
+        
+        'classic (t-shirt)','undershirt','sailor (shirt)','crop (top)','halter (top)',
+        'camisole','tank (top)','peasant (top)','tube (top)','tunic (top)','hoodie',
+        'blazer','biker (jacket)','trucker (jacket)','bomber (jacket)','track (jacket)','tuxedo (jacket)','jeans',
+        'leggings','sailor (pants)','peg (pants)','crop (pants)','short (shorts)','roll-up (shorts)','skater (skirt)',
+        'hobble (skirt)','sheath (skirt)','dirndl (skirt)','blanket (coat)','pea (coat)','halter (dress)',
+        'slip (dress)','jumper (dress)','shift (dress)','sheath (dress)','shirt (dress)','sundress','bodycon (dress)',
+        'gown','sweater (dress)','tunic (dress)','skater (dress)','asymmetrical','symmetrical','peplum','circle',
+        'flare','fit and flare','trumpet','mermaid','bell','bootcut','peg','pencil','straight','a-line','tent',
+        'wide leg','high low','tight (fit)','regular (fit)','loose (fit)','oversized','empire waistline','dropped waistline',
+        'high waist','normal waist','low waist','no waistline','above-the-hip (length)','hip (length)','micro (length)',
+        'mini (length)','above-the-knee (length)','knee (length)','below the knee (length)','midi','maxi (length)',
+        'floor (length)','sleeveless','short (length)','elbow-length','three quarter (length)','wrist-length','regular (collar)',
+        'shirt (collar)','banded (collar)','peter pan (collar)','stand-away (collar)','oversized (collar)','notched (lapel)',
+        'peak (lapel)','shawl (lapel)','napoleon (lapel)','oversized (lapel)','collarless','asymmetric (neckline)',
+        'crew (neck)','round (neck)','v-neck','surplice (neck)','oval (neck)','u-neck','sweetheart (neckline)','queen anne (neck)',
+        'boat (neck)','scoop (neck)','square (neckline)','plunging (neckline)','halter (neck)','high (neck)','turtle (neck)',
+        'cowl (neck)','straight across (neck)','illusion (neck)','off-the-shoulder','one shoulder','set-in sleeve',
+        'dropped-shoulder sleeve','raglan (sleeve)','cap (sleeve)','tulip (sleeve)','puff (sleeve)','bell (sleeve)',
+        'circular flounce (sleeve)','poet (sleeve)','dolman (sleeve), batwing (sleeve)','bishop (sleeve)','leg of mutton (sleeve)',
+        'kimono (sleeve)','cargo (pocket)','patch (pocket)','welt (pocket)','kangaroo (pocket)','seam (pocket)','slash (pocket)',
+        'curved (pocket)','flap (pocket)','single breasted','double breasted','lace up','wrapping','zip-up','fly (opening)',
+        'no opening','plastic','metal','gem','fur','no non-textile material','burnout','distressed','washed','frayed',
+        'printed','ruched','quilted','pleat','gathering','tiered','cutout','slit','lining','applique(a)','bead(a)',
+        'rivet(a)','sequin(a)','no special manufacturing technique','plain (pattern)','abstract','cartoon','letters, numbers',
+        'check','dot','fair isle','floral','geometric','paisley','stripe','leopard','toile de jouy','plant']
