@@ -136,7 +136,7 @@ def test(data,
                 heads = torch.where(labels[ix][5:] == 1)[0]
                 for head in heads:
                     labels_p.append([head.item()] + tail)
-            labels_p = torch.tensor(labels_p)
+            labels_p = torch.tensor(labels_p).to(device)
 
             tcls = labels_p[:, 0].tolist() if nl else []  # target class
 
