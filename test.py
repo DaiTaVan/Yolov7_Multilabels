@@ -238,15 +238,27 @@ def test(data,
     else:
         nt = torch.zeros(1)
 
+    # Save to file 
+    file_p = open(os.path.join(save_dir, 'results_all.txt'), 'w')
     # Print results
     pf = '%20s' + '%12i' * 2 + '%12.3g' * 4  # print format
     print(pf % ('all', seen, nt.sum(), mp, mr, map50, map))
-
+    
+    # Save to file continuing 
+    file_p.write(pf % ('all', seen, nt.sum(), mp, mr, map50, map) + '\n')
+    
     # Print results per class
     if (verbose or (nc < 50 and not training)) and nc > 1 and len(stats):
         for i, c in enumerate(ap_class):
             print(pf % (names[c], seen, nt[c], p[i], r[i], ap50[i], ap[i]))
 
+    # Save to file continuing 
+    if (verbose or (not training)) and nc > 1 and len(stats):
+        for i, c in enumerate(ap_class):
+            file_p.write(pf % (names[c], seen, nt[c], p[i], r[i], ap50[i], ap[i]) + '\n')
+    # Close the file
+    file_p.close()
+    
     # Print speeds
     t = tuple(x / seen * 1E3 for x in (t0, t1, t0 + t1)) + (imgsz, imgsz, batch_size)  # tuple
     if not training:
