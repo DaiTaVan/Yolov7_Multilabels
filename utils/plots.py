@@ -256,7 +256,7 @@ def plot_images(images, targets, paths=None, fname='images.jpg', names=None, max
                 # color = colors[cls % len(colors)]
                 color = colors[cls_list[0] % len(colors)]
                 # cls = names[cls] if names else cls
-                cls_list = [names[ele] if names else ele for ele in cls_list]
+                cls_list = [names[ele.item()] if names else ele for ele in cls_list]
                 cls = ','.join([str(ele) for ele in cls_list])
                 if labels or conf[j] > 0.25:  # 0.25 conf thresh
                     label = '%s' % cls if labels else '%s %.1f' % (cls, conf[j])
