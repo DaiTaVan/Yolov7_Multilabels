@@ -240,6 +240,7 @@ def test(data,
 
     # Save to file 
     file_p = open(os.path.join(save_dir, 'results_all.txt'), 'w')
+    file_p.write(('%20s' + '%12s' * 6) % ('Class', 'Images', 'Labels', 'P', 'R', 'mAP@.5', 'mAP@.5:.95') + '\n')
     # Print results
     pf = '%20s' + '%12i' * 2 + '%12.3g' * 4  # print format
     print(pf % ('all', seen, nt.sum(), mp, mr, map50, map))
