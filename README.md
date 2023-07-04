@@ -59,6 +59,8 @@ cd /yolov7
 
 ``` shell
 python test.py --data data/coco.yaml --img 640 --batch 32 --conf 0.001 --iou 0.65 --device 0 --weights yolov7.pt --name yolov7_640_val
+
+python test.py --data data/image_tagging_data.yaml --img 1280 --batch 32 --conf 0.8 --iou 0.65 --device 0 --weights best_multilabels.pt --name yolov7_1280_test_0.8
 ```
 
 You will get the results:
